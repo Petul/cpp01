@@ -15,15 +15,16 @@
 
 #include <string>
 
-class Zombie {
-  public:
+class Zombie
+{
+   public:
 	Zombie(std::string name);
 	Zombie();
 	~Zombie(void);
 	void announce(void);
 	void setName(std::string name);
 
-  private:
+   private:
 	std::string name_;
 };
 

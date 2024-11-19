@@ -13,7 +13,7 @@
 NAME := zombie
 CXX := c++
 CXXFLAGS := -Wall -Wextra -Werror -std=c++11 -g
-SOURCES := src/Zombie.cpp src/newZombie.cpp src/randomChump.cpp src/main.cpp
+SOURCES := Zombie.cpp newZombie.cpp randomChump.cpp main.cpp
 
 OBJECTS := $(SOURCES:.cpp=.o)
 
@@ -21,10 +21,10 @@ OBJECTS := $(SOURCES:.cpp=.o)
 all: $(NAME)
 
 $(NAME): $(OBJECTS)
-		$(CXX) $(OBJECTS) -I ./include -o $(NAME)
+		$(CXX) $(OBJECTS) -o $(NAME)
 
 %.o: %.cpp
-		$(CXX) $(CXXFLAGS) -I ./include -c $< -o $@
+		$(CXX) $(CXXFLAGS) -c $< -o $@
 
 .PHONY: clean
 clean:
