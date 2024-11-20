@@ -9,9 +9,9 @@
 /*   Updated: 2024/11/19 14:51:36 by pleander         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "HumanA.h"
-#include "HumanB.h"
-#include "Weapon.h"
+#include "HumanA.hpp"
+#include "HumanB.hpp"
+#include "Weapon.hpp"
 
 int main()
 {

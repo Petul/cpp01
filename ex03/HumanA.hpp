@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanB.h                                           :+:      :+:    :+:   */
+/*   HumanA.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pleander <pleander@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/19 14:16:51 by pleander          #+#    #+#             */
-/*   Updated: 2024/11/19 15:02:59 by pleander         ###   ########.fr       */
+/*   Created: 2024/11/19 14:26:11 by pleander          #+#    #+#             */
+/*   Updated: 2024/11/19 14:30:07 by pleander         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMANB_H
-#define HUMANB_H
+#ifndef HUMANA_H
+#define HUMANA_H
 
-#include "Weapon.h"
+#include "Weapon.hpp"
 
-class HumanB
+class HumanA
 {
    public:
-	HumanB(std::string name);
 	void attack(void);
-	void setWeapon(Weapon &weapon);
+	HumanA(std::string name, Weapon &Weapon);
 
    private:
 	std::string name_;
-	Weapon *weapon_{nullptr};
+	Weapon &weapon_;
 };
 
 #endif

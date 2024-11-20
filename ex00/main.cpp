@@ -12,7 +12,7 @@
 
 #include <iostream>
 
-#include "Zombie.h"
+#include "Zombie.hpp"
 
 Zombie *newZombie(std::string name);
 void randomChump(std::string name);
