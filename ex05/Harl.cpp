@@ -6,7 +6,7 @@
 /*   By: pleander <pleander@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 15:19:56 by pleander          #+#    #+#             */
-/*   Updated: 2024/11/20 15:27:18 by pleander         ###   ########.fr       */
+/*   Updated: 2024/11/21 15:40:57 by pleander         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,19 @@
 
 void Harl::complain(std::string level)
 {
-	if (level == "DEBUG") this->debug();
-	if (level == "INFO") this->info();
-	if (level == "WARNING") this->warning();
-	if (level == "ERROR") this->error();
+	void (Harl::* complainFuncs[])(void){&Harl::debug, &Harl::info,
+	                                     &Harl::warning, &Harl::error};
+	std::string levels[]{"DEBUG", "INFO", "WARNING", "ERROR"};
+	for (size_t i = 0; i < sizeof(levels) / sizeof(std::string); i++)
+	{
+		if (level == levels[i])
+		{
+			(this->*complainFuncs[i])();
+			return;
+		}
+	}
+	std::cout << "No such level" << std::endl;
+	return;
 }
 
 void Harl::debug(void)
