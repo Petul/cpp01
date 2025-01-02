@@ -19,8 +19,12 @@ void Harl::complain(std::string level)
 	std::string levels[]{"DEBUG", "INFO", "WARNING", "ERROR"};
 
 	size_t i = 0;
-	for (; i < sizeof(levels) / sizeof(std::string); i++)
+
+	while (i < sizeof(levels) / sizeof(std::string))
+	{
 		if (level == levels[i]) break;
+		i++;
+	}
 
 	switch (i)
 	{
