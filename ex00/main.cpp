@@ -27,6 +27,7 @@ int main(void)
 	catch (std::bad_alloc &e)
 	{
 		std::cerr << e.what() << std::endl;
+		exit(1);
 	}
 	heap_zombie->announce();
 	delete heap_zombie;
