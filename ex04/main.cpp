@@ -21,7 +21,7 @@ void ft_sed(std::string &line, std::string &search, std::string &replace)
 	{
 		line.erase(pos, search.length());
 		line.insert(pos, replace);
-		pos = line.find(search, pos + search.length());
+		pos = line.find(search, pos + 1);
 	}
 }
 
