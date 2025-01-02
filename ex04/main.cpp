@@ -21,24 +21,25 @@ void ft_sed(std::string &line, std::string &search, std::string &replace)
 	{
 		line.erase(pos, search.length());
 		line.insert(pos, replace);
-		pos = line.find(search);
+		pos = line.find(search, pos + search.length());
 	}
 }
 
 int main(int argc, char **argv)
 {
-	std::string file{argv[1]};
-	std::string outfile{file + ".replace"};
-	std::string search{argv[2]};
-	std::string replace{argv[3]};
-	std::ifstream inf{file};
-
 	if (argc != 4)
 	{
 		std::cout << "Usage: " << argv[0]
 		          << " filename string_to_update update_string" << std::endl;
 		return (1);
 	}
+
+	std::string file{argv[1]};
+	std::string outfile{file + ".replace"};
+	std::string search{argv[2]};
+	std::string replace{argv[3]};
+	std::ifstream inf{file};
+
 	if (!inf.is_open())
 	{
 		std::cout << "Error: cannot open infile" << std::endl;
