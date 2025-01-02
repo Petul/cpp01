@@ -12,6 +12,9 @@
 
 #include <string>
 
+#ifndef HARL_HPP
+#define HARL_HPP
+
 class Harl
 {
    public:
@@ -23,3 +26,5 @@ class Harl
 	void warning(void);
 	void error(void);
 };
+
+#endif
