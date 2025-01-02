@@ -6,7 +6,7 @@
 /*   By: pleander <pleander@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 18:36:06 by pleander          #+#    #+#             */
-/*   Updated: 2024/11/18 18:44:15 by pleander         ###   ########.fr       */
+/*   Updated: 2024/12/18 13:26:53 by pleander         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 
 #include <iostream>
 
-Zombie::Zombie(std::string name) : name_{name} {}
+Zombie::Zombie(std::string name) : name_{name}
+{
+}
 
 Zombie::~Zombie(void)
 {
