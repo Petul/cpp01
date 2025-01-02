@@ -27,6 +27,7 @@ int main(void)
 	catch (std::bad_alloc &e)
 	{
 		std::cerr << e.what() << std::endl;
+		exit(1);
 	}
 	for (int i = 0; i < N; i++)
 	{

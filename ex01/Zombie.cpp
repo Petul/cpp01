@@ -14,9 +14,13 @@
 
 #include <iostream>
 
-Zombie::Zombie(std::string name) : name_{name} {}
+Zombie::Zombie(std::string name) : name_{name}
+{
+}
 
-Zombie::Zombie() {}
+Zombie::Zombie()
+{
+}
 
 Zombie::~Zombie(void)
 {
@@ -28,4 +32,7 @@ void Zombie::announce(void)
 	std::cout << this->name_ << ": BraiiiiiiinnnzzzZ..." << std::endl;
 }
 
-void Zombie::setName(std::string name) { this->name_ = name; }
+void Zombie::setName(std::string name)
+{
+	this->name_ = name;
+}
