@@ -14,7 +14,9 @@
 
 #include <iostream>
 
-HumanB::HumanB(std::string name) : name_{name} {}
+HumanB::HumanB(std::string name) : name_{name}
+{
+}
 
 void HumanB::attack(void)
 {
@@ -29,4 +31,7 @@ void HumanB::attack(void)
 	}
 }
 
-void HumanB::setWeapon(Weapon &weapon) { this->weapon_ = &weapon; }
+void HumanB::setWeapon(Weapon &weapon)
+{
+	this->weapon_ = &weapon;
+}
