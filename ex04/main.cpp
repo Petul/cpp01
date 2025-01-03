@@ -16,6 +16,10 @@
 
 void ft_sed(std::string &line, std::string &search, std::string &replace)
 {
+	if (search == "" || search == replace)
+	{
+		return;
+	}
 	size_t pos = line.find(search);
 	while (pos != std::string::npos)
 	{
