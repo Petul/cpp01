@@ -18,11 +18,15 @@ Zombie *zombieHorde(int N, std::string name);
 
 int main(void)
 {
-	int N = 10;
+	int N = 0;
 	Zombie *horde = nullptr;
 	try
 	{
 		horde = zombieHorde(N, "Zombie horde zombie");
+		if (!horde)
+		{
+			return (0);
+		}
 	}
 	catch (std::bad_alloc &e)
 	{
