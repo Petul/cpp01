@@ -6,7 +6,7 @@
 /*   By: pleander <pleander@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 14:34:24 by pleander          #+#    #+#             */
-/*   Updated: 2024/11/19 14:51:36 by pleander         ###   ########.fr       */
+/*   Updated: 2025/01/03 10:21:22 by pleander         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "HumanA.hpp"
